@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Vanameku</string>
+    <string name="data_tidak_ditemukan">Data tidak ditemukan</string>
+    <string name="minimal_pilih_1_gejala">Minimal pilih 1 gejala</string>
+    <string name="tidak_ada_koneksi">Tidak ada koneksi internet</string>
+    <string name="keluar_klik_dua_kali">Klik dua kali untuk keluar</string>
+    <string name="ringkasan">Ringkasan</string>
+    <string name="penanganan_dan_pemeliharaan">Penanganan dan Pemeliharaan</string>
+    <string name="gejala_yang_dipilih">Gejala yang dipilih</string>
+    <string name="total_probabilitas_penyakit">Total probabilitas penyakit</string>
+    <string name="vibriosis">Vibriosis</string>
+    <string name="_0_0">0.0</string>
+    <string name="white_feces_syndrome">White Feces Syndrome</string>
+    <string name="white_spot_syndrome">White Spot Syndrome</string>
+    <string name="infectious_myo_necrosis">Infectious Myo Necrosis</string>
+    <string name="early_mortality_syndrome">Early Mortality Syndrome</string>
+    <string name="enterocytozoon_hepatopenaei">Enterocytozoon Hepatopenaei</string>
+    <string name="ringkas_aplikasi">Sistem pakar diagnosa udang vaname merupakan aplikasi untuk mempermudah para petambak udang vaname untuk mendiagnosa awal gejala dari penyakit udang vaname.</string>
+    <string name="ui_ux_designer">UI/UX Designer</string>
+    <string name="android_developer">Android Developer</string>
+    <string name="pakar">Pakar</string>
+    <string name="waslim">: Waslim</string>
+    <string name="atri_triana_k_s_pi">: Atri Triana K, S.Pi</string>
+    <string name="silahkan_pilih_dan_klik_gejala">Silahkan pilih dan klik gejala</string>
+    <string name="lakukan_diagnosa">Lakukan Diagnosa</string>
+</resources>

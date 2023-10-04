@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.waslim.sispakudangvaname">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".BaseApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/vanameku"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/vanameku_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SisPakUdangVaname"
+        tools:targetApi="31">
+        <activity
+            android:name=".ui.view.about.AboutActivity"
+            android:launchMode="singleTask"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.detailpenyakit.DetailPenyakitActivity"
+            android:launchMode="singleTask"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.daftarpenyakit.DaftarPenyakitActivity"
+            android:launchMode="singleTask"
+            android:exported="false" />
+        <activity
+            android:name=".ui.view.splashscreen.SplashScreenActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.view.hasildiagnosa.HasilDiagnosaActivity"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name=".ui.view.diagnosa.DiagnosaActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="true" />
+        <activity
+            android:name=".ui.view.home.MainActivity"
+            android:launchMode="singleTask"
+            android:exported="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.view.hasildiagnosa.HasilDiagnosaActivity"
+    android:background="@drawable/background_activity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView3"-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0dp"
+                android:layout_height="350dp"
+                android:background="@drawable/home"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/tv_gejala_dipilih"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/gejala_yang_dipilih"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView3"/>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_gejala"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/tv_gejala_dipilih"
+                app:layout_constraintStart_toStartOf="@+id/tv_gejala_dipilih"
+                app:layout_constraintTop_toBottomOf="@+id/tv_gejala_dipilih"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:backgroundTint="#0E2B56">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_card">
+
+                    <TextView
+                        android:id="@+id/tv_total_gejala"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textStyle="normal"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"/>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_probabilitas_penyakit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="@string/total_probabilitas_penyakit"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/cardview_gejala"
+                app:layout_constraintStart_toStartOf="@+id/cardview_gejala"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_gejala" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_penyakit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_probabilitas_penyakit"
+                app:layout_constraintStart_toStartOf="@+id/tv_probabilitas_penyakit"
+                app:layout_constraintTop_toBottomOf="@+id/tv_probabilitas_penyakit"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:backgroundTint="#0E2B56">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/background_card">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/vibriosis"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv6"
+                        app:layout_constraintStart_toStartOf="@+id/tv6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hasilVibriosis" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilVibriosis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/view3"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/white_feces_syndrome"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv6"
+                        app:layout_constraintStart_toStartOf="@+id/tv6"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <View
+                        android:id="@+id/view4"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hasilWhiteFacesSyndrome" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilWhiteFacesSyndrome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintStart_toStartOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                    <TextView
+                        android:id="@+id/tv3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/white_spot_syndrome"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv6"
+                        app:layout_constraintStart_toStartOf="@+id/tv6"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilWhiteSpotSyndrome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintStart_toStartOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintTop_toBottomOf="@+id/view4" />
+
+                    <View
+                        android:id="@+id/view5"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hasilWhiteSpotSyndrome" />
+
+                    <TextView
+                        android:id="@+id/tv4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/infectious_myo_necrosis"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv6"
+                        app:layout_constraintStart_toStartOf="@+id/tv6"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilInfectiousMyoNecrosis"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintStart_toStartOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintTop_toBottomOf="@+id/view5" />
+
+                    <View
+                        android:id="@+id/view6"
+                        android:layout_width="match_parent"
+                        android:layout_height="3dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hasilInfectiousMyoNecrosis" />
+
+                    <TextView
+                        android:id="@+id/tv5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/early_mortality_syndrome"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv6"
+                        app:layout_constraintStart_toStartOf="@+id/tv6"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilEarlyMortalitySyndrome"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintStart_toStartOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintTop_toBottomOf="@+id/view6" />
+
+                    <View
+                        android:id="@+id/view7"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_height="3dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_hasilEarlyMortalitySyndrome" />
+
+                    <TextView
+                        android:id="@+id/tv6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/enterocytozoon_hepatopenaei"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                    <TextView
+                        android:id="@+id/tv_hasilEnterocytozoonHepatopenaei"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginEnd="10dp"
+                        android:text="@string/_0_0"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        app:layout_constraintEnd_toEndOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintStart_toStartOf="@+id/tv_hasilVibriosis"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view7" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="3dp"
+                        android:layout_height="0dp"
+                        android:layout_marginStart="25dp"
+                        android:background="#0E2B56"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/tv6"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/hasil_akhir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/cardview_penyakit"
+                app:layout_constraintStart_toStartOf="@+id/cardview_penyakit"
+                app:layout_constraintTop_toBottomOf="@+id/cardview_penyakit" />
+
+            <TextView
+                android:id="@+id/tv_solusi"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/penanganan_dan_pemeliharaan"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/hasil_akhir"
+                app:layout_constraintStart_toStartOf="@+id/hasil_akhir"
+                app:layout_constraintTop_toBottomOf="@+id/hasil_akhir" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview_penanganan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#0E2B56"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                android:layout_marginBottom="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/tv_solusi"
+                app:layout_constraintStart_toStartOf="@+id/tv_solusi"
+                app:layout_constraintTop_toBottomOf="@+id/tv_solusi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/background_card">
+
+                    <TextView
+                        android:id="@+id/hasil_solusi"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"
+                        android:textStyle="normal"
+                        android:textAlignment="viewStart"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
